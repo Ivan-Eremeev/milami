@@ -10,7 +10,7 @@
 // Подключение файлов. При использовании gulp поменять "// @prepros-append" на "//="
 // libs-settings/fancybox_settings.js
 // libs-settings/mmenu_settings.js
-// libs-settings/slick_settings.js
+// @prepros-append libs-settings/slick_settings.js
 // libs-settings/wow_js_settings.js
 // libs-settings/fullpage_settings.js
 // libs-settings/tinyscrollbar-settings.js
@@ -19,15 +19,14 @@
 // libs-settings/google-map-settings.js
 // mailto-ajax.js
 
-$(document).ready(function () {
+// Брэйкпоинты js
+var	breakXl = 1400,
+		breakLg = 1150,
+		breakMd = 950,
+		breakSm = 769,
+		breakXs = 500;
 
-	// Брэйкпоинты js
-	var	breakXl = 1400,
-			breakLg = 1200,
-			breakMd = 1025,
-			breakSm = 769,
-			breakXs = 500;
-			
+$(document).ready(function () {			
 
 	// Отмена перехода по ссылкам
 	$('a[href="#"]').click(function(e) {
@@ -35,7 +34,7 @@ $(document).ready(function () {
 	});
 
 	// Мобильное меню
-	// myMenu($('#menu'));
+	myMenu($('#menu'));
 
 	// Блок с высотой окна браузера
 	// screenHeight($('#full-height'));
@@ -44,7 +43,7 @@ $(document).ready(function () {
 	// menuScroll($('#menu'));
 
 	// Stiky menu // Липкое меню. При прокрутке добавляем класс stiky.
-	// stikyMenu($('#header'));
+	stikyMenu($('#header'));
 
 	// Inputmask.js // Маска для поля ввода телефона
 	// $('[name=tel]').inputmask("+9(999)999 99 99",{ showMaskOnHover: false });
@@ -133,11 +132,97 @@ $(document).ready(function () {
 	// parallaxMove($('.parallax-move'));
 
 	// Отслеживание скролла окна браузера
-	$(window).scroll(function() {
-		// countNumber($(".count-number")); // Анимация увеличния значения числа
-	});
+	// $(window).scroll(function() {
+	// 	// countNumber($(".count-number")); // Анимация увеличния значения числа
+	// });
+
+	// Ограничение выводимых символов в блоке текста
+	textLimit($('.first-slider_content p'));
 
 	// Отслеживание изменения ширины окна браузера
+// 	var heightResized = false;
+// 	$(window).resize(function() {
+// 		var windowWidth = $(window).width();
+// 		if (heightResized == windowWidth) {
+// 			return;
+// 		}
+// 		heightResized = windowWidth;
+// 		// fontResize(); // Резиновый сайт
+// 		// screenHeight(); // Блок с высотой окна браузера
+// 		// tooltipDisable(); // Отключение всплывающей подсказки
+// 		// sliderReinstall(); // Реинициализация слайдеров
+// 	});
+	
+});
+
+// Мобильное меню
+function myMenu(menu) {
+	var menuBtn = menu.find('#menu-btn'),
+			over = menu.find('.menu_over'),
+			documentWidth = parseInt(document.documentElement.clientWidth),
+			windowsWidth = parseInt(window.innerWidth),
+			scrollbarWidth = windowsWidth - documentWidth,
+			html = $('html'),
+			triggerCatalog = $('#item-catalog > a'),
+			catalog = $('.catalog'),
+			close = $('.menu_close'),
+			time = 150,
+			itemChild = $('.menu_item--child > a'),
+			header = $('#header');
+	// Открытие мобильного меню при клике на гамбургер
+	menuBtn.click(function () {
+		html.toggleClass('lock').css('padding-right',scrollbarWidth);
+		menu.toggleClass('open');
+		menuBtn.toggleClass('is-active');
+		// Закрытие меню при клике на задний слой
+		over.click(function() {
+			html.removeClass('lock').css('padding-right',0);
+			menu.removeClass('open');
+			menuBtn.removeClass('is-active');
+		});
+		// Закрытие меню при клике на крестик
+		close.click(function() {
+			html.removeClass('lock').css('padding-right',0);
+			menu.removeClass('open');
+			menuBtn.removeClass('is-active');
+		});
+	});
+	// Открытие каталога при клике на пункт меню с id "#item-catalog"
+	function catalogShow() {
+		triggerCatalog.click(function() {
+			if (catalog.hasClass('open')) {
+				catalog.stop().slideUp(time);
+				catalog.removeClass('open');
+				triggerCatalog.removeClass('active');
+				header.removeClass('stiky');
+			}else {
+				catalog.stop().slideDown(time);
+				catalog.addClass('open');
+				triggerCatalog.addClass('active');
+				header.addClass('stiky');
+			}
+		})
+	};
+	// Открытие подменю на мобилке
+	function submenuOpen() {
+		itemChild.click(function() {
+			var ul = $(this).next('ul');
+			if ($(window).width() < breakSm) {
+				if (ul.hasClass('open')) {
+					ul.stop().slideUp(time);
+					ul.removeClass('open');
+					$(this).removeClass('active');
+				}else {
+					ul.stop().slideDown(time);
+					ul.addClass('open');
+					$(this).addClass('active');
+				}
+			}
+		});
+	};
+	catalogShow();
+	submenuOpen();
+	// Вызов функций при изменении ширины окна
 	var heightResized = false;
 	$(window).resize(function() {
 		var windowWidth = $(window).width();
@@ -145,38 +230,29 @@ $(document).ready(function () {
 			return;
 		}
 		heightResized = windowWidth;
-		// fontResize(); // Резиновый сайт
-		// screenHeight(); // Блок с высотой окна браузера
-		// tooltipDisable(); // Отключение всплывающей подсказки
-		// sliderReinstall(); // Реинициализация слайдеров
+		if ($(window).width() >= breakSm) {
+			itemChild.next('ul').removeAttr('style');
+			itemChild.next('ul').removeClass('open');
+			itemChild.removeClass('active');
+		}
 	});
-	
-});
+	// Оборачиваем содержимое .catalog классом .row
+	catalog.wrapInner('<div class="row"></div>');
+	// Оборачиваем содержимое .catalog классом .wrap
+	catalog.wrapInner('<div class="wrapper"></div>');
+};
 
-// Мобильное меню
-// function myMenu(menu) {
-// 	var menuBtn = menu.find('#menu-btn')
-// 			over = menu.find('.menu_over'),
-// 			documentWidth = parseInt(document.documentElement.clientWidth),
-// 			windowsWidth = parseInt(window.innerWidth),
-// 			scrollbarWidth = windowsWidth - documentWidth,
-// 			html = $('html');
-// 	menuBtn.click(function () {
-// 		html.toggleClass('lock').css('padding-right',scrollbarWidth);
-// 		menu.toggleClass('open');
-// 		menuBtn.toggleClass('is-active');
-// 		over.click(function() {
-// 			html.removeClass('lock').css('padding-right',0);
-// 			menu.removeClass('open');
-// 			menuBtn.removeClass('is-active');
-// 		});
-// 		menu.find('a').click(function() {
-// 			html.removeClass('lock').css('padding-right',0);
-// 			menu.removeClass('open');
-// 			menuBtn.removeClass('is-active');
-// 		});
-// 	});	
-// };
+// Задаем фоновое изображение .data-img из атибута data
+function imgData() {
+	var block = $('.data-img');
+	block.each(function(index, el) {
+		var blockData = $(this).data('img');
+		$(this).css({
+			'background-image': 'url('+ blockData +')'
+		});
+	});
+};
+imgData();
 
 // // Блок с высотой окна браузера
 // function screenHeight(fullHeight) {
@@ -199,16 +275,34 @@ $(document).ready(function () {
 // };
 
 // // Stiky menu // Липкое меню.
-// function stikyMenu(header) {
-// 	header.offset().top;
-// 	$(window).scroll(function(){
-// 		if( $(window).scrollTop() > header ) {
-// 			header.addClass('stiky');
-// 		} else {
-// 			header.removeClass('stiky');
-// 		}
-// 	});
-// };
+function stikyMenu(header) {
+	$(window).scroll(function(){
+		if( $(window).scrollTop() > 0 ) {
+			header.addClass('stiky');
+		} else {
+			header.removeClass('stiky');
+		}
+	});
+};
+
+// Ограничение выводимых символов в блоке текста
+function textLimit(blockText) {
+	var size = 47,
+			textButton = 'читать',
+			arr = new Array();
+  blockText.each(function(index){
+    var $el = $(this),
+    		html = $el.html();
+    arr.push(html);
+  	if( html.length > size) {
+  		$el.html(html.slice(0,size) + '...<a href="#" class="read-more-button" data-index="'+index+'">'+textButton+'</a>');
+  	}
+  });
+  $('.read-more-button').click(function() {
+  	var index = $(this).data('index');
+  	$(this).parent().text(arr[index]);
+  });
+};
 
 // // Изменяет размер шрифта у тэга html взависимости от размера экрана (для резиновых страниц)(размеры должны быть в em)
 // function fontResize() {

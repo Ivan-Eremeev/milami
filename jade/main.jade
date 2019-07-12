@@ -1,0 +1,133 @@
+extends blocks/base.jade
+
+block title 
+	title MilaMi
+
+block content
+
+		include blocks/header.jade
+		
+		.content
+
+			// first-slider
+			.first-slider
+				.first-slider_bg
+					.wrapper
+						.first-slider_slider#first-slider
+							.first-slider_slide.js-slider-slide
+								.first-slider_title.mobile-visible Студия авторской одежды Милы Михайловой
+								.first-slider_content.mobile-hide
+									h1.first-slider_title Студия авторской одежды Милы Михайловой
+									h2 24 портновские мерки вместо одного классического размера
+									p Благодаря индивидуальным размерам, Вы получаете одежду точно по фигуре. Независимо от особенностей: большая грудь/узкие бедра, полные бедра/маленькая грудь/полные руки. Вещи не будут в обтяг или висеть.
+									a(href="#").btn
+										span.btn_text Смотреть
+								.first-slider_img
+									img(src="img/mannequin.png", alt="mannequin")
+							.first-slider_slide.js-slider-slide
+								.first-slider_title.mobile-visible Студия авторской одежды Милы Михайловой
+								.first-slider_content.mobile-hide
+									h1.first-slider_title Студия авторской <br>одежды Милы Михайловой
+									h2 24 портновские мерки вместо одного классического размера
+									p Благодаря индивидуальным размерам, Вы получаете одежду точно по фигуре. Независимо от особенностей: большая грудь/узкие бедра, полные бедра/маленькая грудь/полные руки. Вещи не будут в обтяг или висеть.
+									a(href="#").btn
+										span.btn_text Смотреть
+								.first-slider_img
+									img(src="img/mannequin.png", alt="mannequin")
+							.first-slider_slide.js-slider-slide
+								.first-slider_title.mobile-visible Студия авторской одежды Милы Михайловой
+								.first-slider_content.mobile-hide
+									h1.first-slider_title Студия авторской <br>одежды Милы Михайловой
+									h2 24 портновские мерки вместо одного классического размера
+									p Благодаря индивидуальным размерам, Вы получаете одежду точно по фигуре. Независимо от особенностей: большая грудь/узкие бедра, полные бедра/маленькая грудь/полные руки. Вещи не будут в обтяг или висеть.
+									a(href="#").btn
+										span.btn_text Смотреть
+								.first-slider_img
+									img(src="img/mannequin.png", alt="mannequin")
+						.slider-controll.first-slider_controll-prev#first-slider-prev
+							span.icon-arrow-left
+						.slider-controll.first-slider_controll-next#first-slider-next
+							span.icon-arrow-right
+						.first-slider_pagination.slider-pagination#first-slider-pagination
+				.first-slider_slider-mobile#first-slider-mobile
+					.first-slider_slider-mobile_slide
+						.first-slider_content.mobile-visible
+							h2 24 портновские мерки вместо одного классического размера
+							p Благодаря индивидуальным размерам, Вы получаете одежду точно по фигуре. Независимо от особенностей: большая грудь/узкие бедра, полные бедра/маленькая грудь/полные руки. Вещи не будут в обтяг или висеть.
+							.center
+								a(href="#").btn
+									span.btn_text Смотреть
+					.first-slider_slider-mobile_slide
+						.first-slider_content.mobile-visible
+							h2 24 портновские мерки вместо одного классического размера
+							p Благодаря индивидуальным размерам, Вы получаете одежду точно по фигуре. Независимо от особенностей: большая грудь/узкие бедра, полные бедра/маленькая грудь/полные руки. Вещи не будут в обтяг или висеть.
+							.center
+								a(href="#").btn
+									span.btn_text Смотреть
+					.first-slider_slider-mobile_slide
+						.first-slider_content.mobile-visible
+							h2 24 портновские мерки вместо одного классического размера
+							p knhkБлагодаря индивидуальным размерам, Вы получаете одежду точно по фигуре. Независимо от особенностей: большая грудь/узкие бедра, полные бедра/маленькая грудь/полные руки. Вещи не будут в обтяг или висеть.
+							.center
+								a(href="#").btn
+									span.btn_text Смотреть
+			// /first-slider
+
+		//- .wrapper
+		//- 	// advantages
+		//- 	#advantages.advantages
+		//- 		.advantages_slider
+		//- 			.slider-advantages#slider-advantages
+		//- 				.slider-advantages_slide.js-slider-slide
+		//- 					.slider-advantages_img
+		//- 						img(src="img/sewing-machine.png", alt="sewing-machine")
+		//- 					.slider-advantages_content
+		//- 						h2 Стильно, стройно и свободно! В любом возрасте, с любой фигурой!
+		//- 						p Свободный крой без лишних выточек не требует четкой посадки по фигуре. Вещи подчеркивают Ваши достоинства в любом возрасте и с любой фигурой.
+		//- 				.slider-advantages_slide.js-slider-slide
+		//- 					.slider-advantages_img
+		//- 						img(src="img/mannequin2.png", alt="mannequin")
+		//- 					.slider-advantages_content
+		//- 						h2 Одежда, как для себя
+		//- 						p Автор Мила Михайлова одевается только в свою одежду. Создает вещи для всех, как для себя.
+		//- 				.slider-advantages_slide.js-slider-slide
+		//- 					.slider-advantages_img
+		//- 						img(src="img/sewing-tools.png", alt="sewing-tools")
+		//- 					.slider-advantages_content
+		//- 						h2 24 портновские мерки вместо одного классического размера
+		//- 						p Благодаря индивидуальным размерам, Вы получаете одежду точно по фигуре. Независимо от особенностей: большая грудь/узкие бедра, полные бедра/маленькая грудь/полные руки. Вещи не будут в обтяг или висеть.
+		//- 				.slider-advantages_slide.js-slider-slide
+		//- 					.slider-advantages_img
+		//- 						img(src="img/sewing-machine.png", alt="sewing-machine")
+		//- 					.slider-advantages_content
+		//- 						h2 Стильно, стройно и свободно! В любом возрасте, с любой фигурой!
+		//- 						p Свободный крой без лишних выточек не требует четкой посадки по фигуре. Вещи подчеркивают Ваши достоинства в любом возрасте и с любой фигурой.
+		//- 		.slider-advantages_bottom-panel
+		//- 			.slider-advantages_controll
+		//- 				.slider-controll.slider-advantages_controll-prev#slider-advantages-prev
+		//- 					span.icon-arrow-left
+		//- 				.slider-advantages_pagination.slider-pagination#slider-advantages_pagination
+		//- 				.slider-controll.slider-advantages_controll-next#slider-advantages-next
+		//- 					span.icon-arrow-right
+		//- 			a(href="#").btn
+		//- 				span.btn_text Конструктор размеров
+		//- 	// /advantages
+			
+		include blocks/footer.jade
+
+block js
+	script(src="js/jquery-3.2.1.min.js")
+	//- script(src="js/jquery.fancybox.min.js")
+	script(src="js/slick.min.js")
+	//- script(src="js/jquery.matchHeight-min.js")
+	//- script(src="js/jquery.inputmask.bundle.min.js")
+	//- script(src="js/autosize.min.js")
+	//- script(src="js/tooltipster.bundle.min.js")
+	//- script(src="js/jquery.mmenu.all.js")
+	//- script(src="js/wow.min.js")
+	//- script(src="js/fullpage.min.js")
+	//- script(src="js/jquery.vide.min.js")
+	//- script(src="js/jquery.scrollbar.min.js")
+	//- <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+	//- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDArYzQvxn3CL3pB92Iqn9gaDltBFLfF4Y"></script>
+	script(src="js/script.js")

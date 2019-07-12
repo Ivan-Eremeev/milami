@@ -1,0 +1,54 @@
+// advantages
+.advantages {
+	position: relative;
+	&_slider {
+
+	}
+}
+.slider-advantages {
+	&_slide {
+
+	}
+	&_img {
+		img {
+
+		}
+	}
+	&_content {
+		h2 {
+
+		}
+		p {
+
+		}
+	}
+	&_bottom-panel {
+		display: flex;
+		justify-content: space-between;
+	}
+	&_pagination {
+		position: static;
+		left: auto;
+		bottom: auto;
+	}
+	&_controll {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+	}
+	&_controll-prev {
+		position: static !important;
+		left: auto;
+		top: auto;
+	}
+	&_controll-next {
+		position: static !important;
+		right: auto;
+		top: auto;
+	}
+	.btn {
+
+	}
+}
+// /advantages

@@ -1,33 +1,181 @@
 // header
 header.header#header
 	.wrapper
-		.header_container
 
+		.header_top
 			// menu
 			//- .menu--left .menu--right .menu--top .menu--bottom .menu--drop
-			#menu.menu.menu--right
+			#menu.menu.menu--left
 				button#menu-btn.menu_btn.hamburger.hamburger--vortex(type="button")
 					span.hamburger-box
 						span.hamburger-inner
+				a(href="main.html").logo.mobile-visible
+					img(src="img/logo.svg", alt="logo")
+				a(href="#").cart.mobile-visible
+					img(src="img/cart.svg", alt="cart")
 				nav#mmenu.menu_nav
+					.menu_close
 					ul.menu_list
+						li#item-catalog.menu_item.menu_item--catalog
+							a(href="#") Каталог
+							span.menu_catalog-hamburger
+
+							// catalog
+							ul.catalog.mobile-hide
+								li.catalog_col
+									ul.catalog_list
+										li.catalog_item
+											a(href="#") Свитшоты
+										li.catalog_item
+											a(href="#") Вязаные вещи
+										li.catalog_item
+											a(href="#") Брюки
+										li.catalog_item
+											a(href="#") Водолазки
+										li.catalog_item
+											a(href="#") Джемперы, жакеты, бомберы, свитеры
+										li.catalog_item
+											a(href="#") Жилеты
+										li.catalog_item
+											a(href="#") Комбинезоны
+								li.catalog_col
+									ul.catalog_list
+										li.catalog_item
+											a(href="#") Куртки
+										li.catalog_item
+											a(href="#") Майки, топы
+										li.catalog_item
+											a(href="#") Накидки, пончо
+										li.catalog_item
+											a(href="#") Пальто
+										li.catalog_item
+											a(href="#") Платья
+										li.catalog_item
+											a(href="#") Плащи
+										li.catalog_item
+											a(href="#") Кардиганы, шазюбль
+								li.catalog_col
+									ul.catalog_list
+										li.catalog_item
+											a(href="#") Рубашки, блузы
+										li.catalog_item
+											a(href="#") Сарафаны
+										li.catalog_item
+											a(href="#") Спортивные костюмы
+										li.catalog_item
+											a(href="#") Туники
+										li.catalog_item
+											a(href="#") Юбки
+										li.catalog_item
+											a(href="#") Костюмы
+								li.catalog_col.catalog_col--picture
+									span.catalog_picture
+										span.catalog_img
+											img(src="img/catalog-sale.jpg", alt="image")
+										span.catalog_action
+											span.catalog_title Распродажа
+											span.btn
+												span.btn_text Скидки до 30%
+							ul.catalog.catalog--mobile.mobile-visible
+								li.catalog_col
+									ul.catalog_list
+										li.catalog_item.data-img(data-img="img/jackets.jpg")
+											a(href="#") Куртки
+										li.catalog_item.data-img(data-img="img/tunics.jpg")
+											a(href="#") Туники
+										li.catalog_item.data-img(data-img="img/knitted.jpg")
+											a(href="#") Вязаные<br>вещи
+										li.catalog_item.data-img(data-img="img/dresses.jpg")
+											a(href="#") Платья
+										li.catalog_item.data-img(data-img="img/coat.jpg")
+											a(href="#") Пальто
+										li.catalog_item.data-img(data-img="img/trousers.jpg")
+											a(href="#") Брюки
+										li.catalog_item.data-img(data-img="img/suits.jpg")
+											a(href="#") Костюмы
+							// /catalog
+							
 						li.menu_item
-							a(href="#").menu_link Меню 1
+							a(href="#") Новинки
+						li.menu_item.menu_item--child
+							a(href="#") О МилаМи
+							ul.submenu
+								li.submenu_item
+									a(href="#") О бренде
+								li.submenu_item
+									a(href="#") О бутике
+								li.submenu_item
+									a(href="#") Новости
+								li.submenu_item
+									a(href="#") Оптовикам
+						li.menu_item.menu_item--child
+							a(href="#") Как купить
+							ul.submenu
+								li.submenu_item
+									a(href="#") Правила
+								li.submenu_item
+									a(href="#") Как заказать
+								li.submenu_item
+									a(href="#") Как выбрать размер
+								li.submenu_item
+									a(href="#") Возврат и обмен
+								li.submenu_item
+									a(href="#") Доставка
+								li.submenu_item
+									a(href="#") Способы оплаты
 						li.menu_item
-							a(href="#").menu_link Меню 2
+							a(href="#") Распродажа
+						li.menu_item.menu_item--child
+							a(href="#") Стилист
+							ul.submenu
+								li.submenu_item
+									a(href="#") Консультация специалиста
+								li.submenu_item
+									a(href="#") Смена имиджа
+								li.submenu_item
+									a(href="#") Обучение, видеоуроки от стилиста
+								li.submenu_item
+									a(href="#") Рекомендации по уходу
 						li.menu_item
-							a(href="#").menu_link Меню 3
-						li.menu_item
-							a(href="#").menu_link Меню 4
-						li.menu_item
-							a(href="#").menu_link Меню 5
-						li.menu_item
-							a(href="#").menu_link Меню 6
-						li.menu_item
-							a(href="#").menu_link Меню 7
-						li.menu_item
-							a(href="#").menu_link Меню 8
+							a(href="#") Контакты
+
+					//- // contacts
+					//- .contacts
+					//- 	.contacts_address Киров, Спасская 25
+					//- 	.contacts_email
+					//- 		input(type="email", name="email" placeholder="Ваш email")
+					//- 	a(href="#").contacts_subscribe
+					//- // /contacts
+
 				.menu_over
 			// /menu
+
+			a(href="mailto:mail@milamikirov.ru").email mail@milamikirov.ru
+
+			a(href="#").request
+				span.request_text Оставить заявку
+				span.request_icon.icon-arrow-right
+
+		.header_bottom
+
+			a(href="main.html").logo
+				img(src="img/logo.svg", alt="logo")
+
+			.header-description Официальный интернет-магазин авторской женской одежды
+
+			.search
+				input(type="text" placeholder="Поиск")
+
+			ul.user-controll
+				li.user-controll_item
+					a(href="#").favorites
+						img(src="img/favorites.svg", alt="favorites")
+				li.user-controll_item
+					a(href="#").user
+						img(src="img/user.svg", alt="user")
+				li.user-controll_item
+					a(href="#").cart
+						img(src="img/cart.svg", alt="cart")
+						span.cart_count 0
 
 // /header
