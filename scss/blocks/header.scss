@@ -19,6 +19,9 @@
 		justify-content: space-between;
 		align-items: center;
 	}
+	.contacts {
+		display: none;
+	}
 	@media (max-width: $break_sm) {
 		background-color: #fff;
 		> .wrapper {
@@ -32,6 +35,15 @@
 		}
 		&_bottom {
 			display: none;
+		}
+		.contacts {
+			display: block;
+			background-color: #fff;
+			&_email {
+				input {
+					background-color: #fff;
+				}
+			}
 		}
 	}
 }

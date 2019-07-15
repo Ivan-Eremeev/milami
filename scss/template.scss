@@ -25,6 +25,7 @@ input {
 }
 .wrapper {
 	@include wrapper();
+	width: 100%;
 }
 body {
 	display: flex;
@@ -72,7 +73,7 @@ h2 {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	height: 35px;
+	height: 40px;
 	padding: 0 25px;
 	border-radius: 25px;
 	background-color: $yellow;
@@ -156,9 +157,204 @@ h2 {
 		background-color: $gray;
 	}
 	.slick-active {
-		button {
+	button {
 			background-color: $yellow;
 		}
 	}
 }
 // /settings
+
+.text-line {
+	padding: 23px 0;
+	border-top: 1px solid $grayL;
+	border-bottom: 1px solid $grayL;
+	@media (max-width: $break_sm) {
+		display: none;
+	}
+}
+
+.navigation-contacts {
+	padding: 41px 0 29px;
+	.wrapper {
+		display: flex;
+	}
+	@media (max-width: $break_sm) {
+		padding: 41px 0 0;
+		.wrapper {
+			flex-wrap: wrap;
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+
+// navigation
+.navigation {
+	flex-grow: 1;
+	&_list {
+		display: flex;
+	}
+	&_item {
+		flex: 1;
+	}
+	&_link {
+		display: inline-block;
+		margin-bottom: 19px;
+		font-weight: 700;
+		color: $black;
+	}
+	@media (max-width: $break_md) {
+		&_list {
+			flex-wrap: wrap;
+		}
+		&_item {
+			width: 100%;
+			flex: none;
+		}
+	}
+	@media (max-width: $break_sm) {
+		float: none;
+		width: 100%;
+		&_item {
+			&:not(:last-child) {
+				border-bottom: 1px solid $grayL;
+			}
+		}
+		&_link {
+			display: block;
+			padding: 14px 20px;
+			margin-bottom: 0;
+			font-size: 14px;
+			font-weight: 400;
+			position: relative;
+			&.accordeon_trigger {
+				&:after {
+					font-family: "icomoon";
+					content: '\1f300';
+					display: block;
+					position: absolute;
+					top: 6px;
+					right: 14px;
+					font-size: 24px;
+				}
+			}
+		}
+	}
+}
+.subnav {
+	&_item {
+		margin-bottom: 14px;
+	}
+	&_link {
+		color: $gray;
+	}
+	@media (max-width: $break_sm) {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+// /navigation
+
+// contacts
+.contacts {
+	width: 256px;
+	&_address {
+		display: flex;
+		align-items: center;
+		padding-left: 10px;
+		margin-bottom: 36px;
+		svg {
+			margin-right: 10px;
+			fill: $yellow;
+		}
+	}
+	&_email {
+		margin-bottom: 14px;
+		input {
+			width: 100%;
+			height: 40px;
+			padding: 0 24px;
+			border-radius: 25px;
+			border: none;
+			box-shadow: inset 0 10px  10px #E9E9EB;
+			background-color: #ffffff;
+			&::placeholder {
+				color: $gray;
+			}
+		}
+	}
+	.request {
+		display: inline-block;
+		padding-left: 10px;
+		margin-bottom: 44px;
+	}
+	&_copy {
+		display: none;
+	}
+	@media (max-width: $break_sm) {
+		width: 100%;
+		background-color: $grayL;
+		font-size: 14px;
+		padding: 20px 0;
+		&_address {
+			justify-content: center;
+			margin-left: 0;
+			margin-bottom: 20px;
+			svg {
+				fill: $black;
+			}
+		}
+		&_email {
+			padding-left: 20px;
+			padding-right: 18px;
+			input {
+				height: 52px;
+				font-size: 14px;
+				box-shadow: none;
+				border: 1px solid $gray;
+				background-color: $grayL;
+			}
+		}
+		.request {
+			display: block;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		&_copy {
+			display: inline-block;
+			margin-top: 13px;
+			font-size: 12px;
+			color: $gray;
+		}
+	}
+}
+.social {
+	display: flex;
+	&_item {
+		margin-right: 12px;
+	}
+	&_link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 36px;
+		height: 36px;
+		border: 1px solid $yellow;
+		border-radius: 50%;
+		font-size: 20px;
+		color: $yellow;
+		&.icon-youtube-play {
+			font-size: 17px;
+		}
+	}
+	@media (max-width: $break_sm) {
+		justify-content: center;
+		&_link {
+			width: 42px;
+			height: 42px;
+			border-color: $black;
+			color: $black;
+		}
+	}
+}
+// /contacts

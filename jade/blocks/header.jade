@@ -10,7 +10,7 @@ header.header#header
 					span.hamburger-box
 						span.hamburger-inner
 				a(href="main.html").logo.mobile-visible
-					img(src="img/logo.svg", alt="logo")
+					img(src="img/logo.png", alt="logo")
 				a(href="#").cart.mobile-visible
 					img(src="img/cart.svg", alt="cart")
 				nav#mmenu.menu_nav
@@ -139,13 +139,25 @@ header.header#header
 						li.menu_item
 							a(href="#") Контакты
 
-					//- // contacts
-					//- .contacts
-					//- 	.contacts_address Киров, Спасская 25
-					//- 	.contacts_email
-					//- 		input(type="email", name="email" placeholder="Ваш email")
-					//- 	a(href="#").contacts_subscribe
-					//- // /contacts
+					// contacts
+					form(action="#").contacts
+						.contacts_address.js-img-svg
+							img(src="img/location.svg", alt="location")
+							span Киров, Спасская 25
+						.contacts_email
+							input(type="email", name="email" placeholder="Ваш email")
+						a(href="#").request
+							span.request_text Подписаться на новости
+						ul.social
+							li.social_item
+								a(href="#").social_link.icon-vk
+							li.social_item
+								a(href="#").social_link.icon-instagram
+							li.social_item
+								a(href="#").social_link.icon-youtube-play
+						.center
+							.contacts_copy &copy; Милами 2019
+					// /contacts
 
 				.menu_over
 			// /menu
@@ -159,7 +171,7 @@ header.header#header
 		.header_bottom
 
 			a(href="main.html").logo
-				img(src="img/logo.svg", alt="logo")
+				img(src="img/logo.png", alt="logo")
 
 			.header-description Официальный интернет-магазин авторской женской одежды
 

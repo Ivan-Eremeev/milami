@@ -7,7 +7,7 @@
 
 // Переменные для кастомизации Mixingrid
 $columns: 12; // Колличество колонок
-$max-width: 1140px; // Максимальная ширина контейнера
+$max-width: 1366px; // Максимальная ширина контейнера 1140
 $gutter: 20px; // Расстояние между колонками
 $offset: 30px; // Поля контейнера
 $offset-sm: 20px; // Поля контейнера на мобилке
@@ -47,3 +47,7 @@ $blue: #3B65FA;
 @import 'blocks/contacts';
 @import 'blocks/first-slider';
 @import 'blocks/advantages';
+@import 'blocks/catalog-section';
+@import 'blocks/sales-hits';
+@import 'blocks/reviews';
+@import 'blocks/footer';

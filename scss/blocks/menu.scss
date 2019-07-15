@@ -150,6 +150,23 @@
 			&--catalog {
 				> a {
 					padding: 20px 50px 20px 65px;
+					&:after {
+						content: '\1f300';
+						display: block;
+						font-family: 'icomoon' !important;
+						font-weight: 400;
+						font-size: 30px;
+						position: absolute;
+						top: 50%;
+						right: 15px;
+						transform: translate(0,-50%);
+						transition: .3s;
+					}
+					&.active {
+						&:after {
+							transform: translate(0,-50%) rotate(180deg);
+						}
+					}
 				}
 			}
 			&--child {

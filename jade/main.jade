@@ -7,49 +7,54 @@ block content
 
 		include blocks/header.jade
 		
-		.content
+		main.content
 
 			// first-slider
 			.first-slider
 				.first-slider_bg
 					.wrapper
 						.first-slider_slider#first-slider
+
 							.first-slider_slide.js-slider-slide
-								.first-slider_title.mobile-visible Студия авторской одежды Милы Михайловой
-								.first-slider_content.mobile-hide
+								.first-slider_content.first-slider_content--nopadding
 									h1.first-slider_title Студия авторской одежды Милы Михайловой
-									h2 24 портновские мерки вместо одного классического размера
-									p Благодаря индивидуальным размерам, Вы получаете одежду точно по фигуре. Независимо от особенностей: большая грудь/узкие бедра, полные бедра/маленькая грудь/полные руки. Вещи не будут в обтяг или висеть.
-									a(href="#").btn
-										span.btn_text Смотреть
+									.first-slider_text.mobile-hide
+										h2 24 портновские мерки вместо одного классического размера
+										p Благодаря индивидуальным размерам, Вы получаете одежду точно по фигуре. Независимо от особенностей: большая грудь/узкие бедра, полные бедра/маленькая грудь/полные руки. Вещи не будут в обтяг или висеть.
+										a(href="#").btn
+											span.btn_text Смотреть
 								.first-slider_img
 									img(src="img/mannequin.png", alt="mannequin")
+
 							.first-slider_slide.js-slider-slide
-								.first-slider_title.mobile-visible Студия авторской одежды Милы Михайловой
-								.first-slider_content.mobile-hide
-									h1.first-slider_title Студия авторской <br>одежды Милы Михайловой
-									h2 24 портновские мерки вместо одного классического размера
-									p Благодаря индивидуальным размерам, Вы получаете одежду точно по фигуре. Независимо от особенностей: большая грудь/узкие бедра, полные бедра/маленькая грудь/полные руки. Вещи не будут в обтяг или висеть.
-									a(href="#").btn
-										span.btn_text Смотреть
+								.first-slider_content.first-slider_content--nopadding
+									h1.first-slider_title Студия авторской одежды Милы Михайловой
+									.first-slider_text.mobile-hide
+										h2 24 портновские мерки вместо одного классического размера
+										p Благодаря индивидуальным размерам, Вы получаете одежду точно по фигуре. Независимо от особенностей: большая грудь/узкие бедра, полные бедра/маленькая грудь/полные руки. Вещи не будут в обтяг или висеть.
+										a(href="#").btn
+											span.btn_text Смотреть
 								.first-slider_img
 									img(src="img/mannequin.png", alt="mannequin")
+
 							.first-slider_slide.js-slider-slide
-								.first-slider_title.mobile-visible Студия авторской одежды Милы Михайловой
-								.first-slider_content.mobile-hide
-									h1.first-slider_title Студия авторской <br>одежды Милы Михайловой
-									h2 24 портновские мерки вместо одного классического размера
-									p Благодаря индивидуальным размерам, Вы получаете одежду точно по фигуре. Независимо от особенностей: большая грудь/узкие бедра, полные бедра/маленькая грудь/полные руки. Вещи не будут в обтяг или висеть.
-									a(href="#").btn
-										span.btn_text Смотреть
+								.first-slider_content.first-slider_content--nopadding
+									h1.first-slider_title Студия авторской одежды Милы Михайловой
+									.first-slider_text.mobile-hide
+										h2 24 портновские мерки вместо одного классического размера
+										p Благодаря индивидуальным размерам, Вы получаете одежду точно по фигуре. Независимо от особенностей: большая грудь/узкие бедра, полные бедра/маленькая грудь/полные руки. Вещи не будут в обтяг или висеть.
+										a(href="#").btn
+											span.btn_text Смотреть
 								.first-slider_img
 									img(src="img/mannequin.png", alt="mannequin")
+
 						.slider-controll.first-slider_controll-prev#first-slider-prev
 							span.icon-arrow-left
 						.slider-controll.first-slider_controll-next#first-slider-next
 							span.icon-arrow-right
 						.first-slider_pagination.slider-pagination#first-slider-pagination
 				.first-slider_slider-mobile#first-slider-mobile
+
 					.first-slider_slider-mobile_slide
 						.first-slider_content.mobile-visible
 							h2 24 портновские мерки вместо одного классического размера
@@ -57,6 +62,7 @@ block content
 							.center
 								a(href="#").btn
 									span.btn_text Смотреть
+
 					.first-slider_slider-mobile_slide
 						.first-slider_content.mobile-visible
 							h2 24 портновские мерки вместо одного классического размера
@@ -64,6 +70,7 @@ block content
 							.center
 								a(href="#").btn
 									span.btn_text Смотреть
+
 					.first-slider_slider-mobile_slide
 						.first-slider_content.mobile-visible
 							h2 24 портновские мерки вместо одного классического размера
@@ -73,45 +80,455 @@ block content
 									span.btn_text Смотреть
 			// /first-slider
 
-		//- .wrapper
-		//- 	// advantages
-		//- 	#advantages.advantages
-		//- 		.advantages_slider
-		//- 			.slider-advantages#slider-advantages
-		//- 				.slider-advantages_slide.js-slider-slide
-		//- 					.slider-advantages_img
-		//- 						img(src="img/sewing-machine.png", alt="sewing-machine")
-		//- 					.slider-advantages_content
-		//- 						h2 Стильно, стройно и свободно! В любом возрасте, с любой фигурой!
-		//- 						p Свободный крой без лишних выточек не требует четкой посадки по фигуре. Вещи подчеркивают Ваши достоинства в любом возрасте и с любой фигурой.
-		//- 				.slider-advantages_slide.js-slider-slide
-		//- 					.slider-advantages_img
-		//- 						img(src="img/mannequin2.png", alt="mannequin")
-		//- 					.slider-advantages_content
-		//- 						h2 Одежда, как для себя
-		//- 						p Автор Мила Михайлова одевается только в свою одежду. Создает вещи для всех, как для себя.
-		//- 				.slider-advantages_slide.js-slider-slide
-		//- 					.slider-advantages_img
-		//- 						img(src="img/sewing-tools.png", alt="sewing-tools")
-		//- 					.slider-advantages_content
-		//- 						h2 24 портновские мерки вместо одного классического размера
-		//- 						p Благодаря индивидуальным размерам, Вы получаете одежду точно по фигуре. Независимо от особенностей: большая грудь/узкие бедра, полные бедра/маленькая грудь/полные руки. Вещи не будут в обтяг или висеть.
-		//- 				.slider-advantages_slide.js-slider-slide
-		//- 					.slider-advantages_img
-		//- 						img(src="img/sewing-machine.png", alt="sewing-machine")
-		//- 					.slider-advantages_content
-		//- 						h2 Стильно, стройно и свободно! В любом возрасте, с любой фигурой!
-		//- 						p Свободный крой без лишних выточек не требует четкой посадки по фигуре. Вещи подчеркивают Ваши достоинства в любом возрасте и с любой фигурой.
-		//- 		.slider-advantages_bottom-panel
-		//- 			.slider-advantages_controll
-		//- 				.slider-controll.slider-advantages_controll-prev#slider-advantages-prev
-		//- 					span.icon-arrow-left
-		//- 				.slider-advantages_pagination.slider-pagination#slider-advantages_pagination
-		//- 				.slider-controll.slider-advantages_controll-next#slider-advantages-next
-		//- 					span.icon-arrow-right
-		//- 			a(href="#").btn
-		//- 				span.btn_text Конструктор размеров
-		//- 	// /advantages
+			// advantages
+			#advantages.advantages
+				.wrapper
+					.advantages_slider
+						.slider-advantages#slider-advantages
+
+							.slider-advantages_slide.js-slider-slide
+								.slider-advantages_img
+									img(src="img/sewing-machine.png", alt="sewing-machine")
+								.slider-advantages_content
+									h2 Стильно, стройно и свободно! В любом возрасте, с любой фигурой!
+									p Свободный крой без лишних выточек не требует четкой посадки по фигуре. Вещи подчеркивают Ваши достоинства в любом возрасте и с любой фигурой.
+
+							.slider-advantages_slide.js-slider-slide
+								.slider-advantages_img
+									img(src="img/mannequin2.png", alt="mannequin")
+								.slider-advantages_content
+									h2 Одежда, как для себя
+									p Автор Мила Михайлова одевается только в свою одежду. Создает вещи для всех, как для себя.
+
+							.slider-advantages_slide.js-slider-slide
+								.slider-advantages_img
+									img(src="img/sewing-tools.png", alt="sewing-tools")
+								.slider-advantages_content
+									h2 24 портновские мерки вместо одного классического размера
+									p Благодаря индивидуальным размерам, Вы получаете одежду точно по фигуре. Независимо от особенностей: большая грудь/узкие бедра, полные бедра/маленькая грудь/полные руки. Вещи не будут в обтяг или висеть.
+
+							.slider-advantages_slide.js-slider-slide
+								.slider-advantages_img
+									img(src="img/sewing-machine.png", alt="sewing-machine")
+								.slider-advantages_content
+									h2 Стильно, стройно и свободно! В любом возрасте, с любой фигурой!
+									p Свободный крой без лишних выточек не требует четкой посадки по фигуре. Вещи подчеркивают Ваши достоинства в любом возрасте и с любой фигурой.
+
+					.slider-advantages_bottom-panel
+						.slider-advantages_controll
+							.slider-controll.slider-advantages_controll-prev#slider-advantages-prev
+								span.icon-arrow-left
+							.slider-advantages_pagination.slider-pagination#slider-advantages_pagination
+							.slider-controll.slider-advantages_controll-next#slider-advantages-next
+								span.icon-arrow-right
+						a(href="#").btn
+							span.btn_text Конструктор размеров
+							img(src="img/scissors.svg", alt="scissors")
+				.slider-advantages_dots
+			// /advantages
+
+			// catalog-section
+			#catalog-section.catalog-section
+				.wrapper
+					.catalog-section_slider#catalog-section_slider
+
+						.catalog-section_slide
+							.row
+								.catalog-section_col-half
+									a(href="#").catalog-section_link.data-img(data-img="img/catalog-news.jpg")
+										span Новинки
+								.catalog-section_col-half
+									a(href="#").catalog-section_link.data-img(data-img="img/catalog-popular.jpg")
+										span Популярные <br>модели
+							.row
+								.catalog-section_col
+									a(href="#").catalog-section_link.data-img(data-img="img/catalog-jackets.jpg")
+										span Куртки
+								.catalog-section_col
+									a(href="#").catalog-section_link.data-img(data-img="img/catalog-tunics.jpg")
+										span Туники
+								.catalog-section_col
+									a(href="#").catalog-section_link.data-img(data-img="img/catalog-knitted.jpg")
+										span Вязаные <br>вещи
+								.catalog-section_col
+									a(href="#").catalog-section_link.data-img(data-img="img/catalog-skirts.jpg")
+										span Юбки
+							.row
+								.catalog-section_col
+									a(href="#").catalog-section_link.data-img(data-img="img/catalog-dresses.jpg")
+										span Платья
+								.catalog-section_col
+									a(href="#").catalog-section_link.data-img(data-img="img/catalog-coat.jpg")
+										span Пальто
+								.catalog-section_col
+									a(href="#").catalog-section_link.data-img(data-img="img/catalog-trousers.jpg")
+										span Брюки
+								.catalog-section_col
+									a(href="#").catalog-section_link.data-img(data-img="img/catalog-suits.jpg")
+										span Костюмы
+
+						.catalog-section_slide
+							.row
+								.catalog-section_col-half
+									a(href="#").catalog-section_link.data-img(data-img="img/catalog-news.jpg")
+										span Новинки
+								.catalog-section_col-half
+									a(href="#").catalog-section_link.data-img(data-img="img/catalog-popular.jpg")
+										span Популярные <br>модели
+							.row
+								.catalog-section_col
+									a(href="#").catalog-section_link.data-img(data-img="img/catalog-jackets.jpg")
+										span Куртки
+								.catalog-section_col
+									a(href="#").catalog-section_link.data-img(data-img="img/catalog-tunics.jpg")
+										span Туники
+								.catalog-section_col
+									a(href="#").catalog-section_link.data-img(data-img="img/catalog-knitted.jpg")
+										span Вязаные <br>вещи
+								.catalog-section_col
+									a(href="#").catalog-section_link.data-img(data-img="img/catalog-skirts.jpg")
+										span Юбки
+							.row
+								.catalog-section_col
+									a(href="#").catalog-section_link.data-img(data-img="img/catalog-dresses.jpg")
+										span Платья
+								.catalog-section_col
+									a(href="#").catalog-section_link.data-img(data-img="img/catalog-coat.jpg")
+										span Пальто
+								.catalog-section_col
+									a(href="#").catalog-section_link.data-img(data-img="img/catalog-trousers.jpg")
+										span Брюки
+								.catalog-section_col
+									a(href="#").catalog-section_link.data-img(data-img="img/catalog-suits.jpg")
+										span Костюмы
+
+					.catalog-section_controll-prev.slider-controll#catalog-section_slider-prev
+						span.icon-arrow-left
+					.catalog-section_controll-next.slider-controll#catalog-section_slider-next
+						span.icon-arrow-right
+			// /catalog-section
+
+			// sales-hits
+			#sales-hits.sales-hits
+				.wrapper
+					.center
+						h2.sales-hits_title Хиты продаж
+					.sales-hits_slider#sales-hits_slider
+
+						.sales-hits_slide
+							.sales-hits_img-block
+								.sales-hits_subslider
+									.sales-hits_subslide
+										a(href="#").sales-hits_img
+											img(src="img/catalog/dress1.jpg", alt="dress")
+									.sales-hits_subslide
+										a(href="#").sales-hits_img
+											img(src="img/catalog/dress2.jpg", alt="dress")
+									.sales-hits_subslide
+										a(href="#").sales-hits_img
+											img(src="img/catalog/dress3.jpg", alt="dress")
+								.sales-hits_subslider-prev.slider-controll.sales-hits_slider-prev
+									span.icon-keyboard_arrow_left
+								.sales-hits_subslider-next.slider-controll.sales-hits_slider-next
+									span.icon-keyboard_arrow_right
+								.sales-hits_buttons
+									a(href="#").sales-hits_button.js-img-svg
+										img(src="img/like.svg", alt="favorites").mobile-hide
+										img(src="img/favorites-hits.svg", alt="favorites").mobile-visible
+									a(href="#").sales-hits_button.js-img-svg.mobile-hide
+										img(src="img/megaphone.svg", alt="megaphone")
+								a(href="#").sales-hits_cart
+									img(src="img/cart.svg", alt="cart")
+							.sales-hits_content
+								p Платье "Чистая линия" костюмная ткань охра
+								.sales-hits_bottom-panel
+									.sales-hits_art Артикул 3292
+									.sales-hits_prise 4 100 
+										span.icon-rouble
+								.btn.mobile-visible
+									img(src="img/cart.svg", alt="cart")
+
+						.sales-hits_slide
+							.sales-hits_img-block
+								.sales-hits_subslider
+									.sales-hits_subslide
+										a(href="#").sales-hits_img
+											img(src="img/catalog/dress2.jpg", alt="dress")
+									.sales-hits_subslide
+										a(href="#").sales-hits_img
+											img(src="img/catalog/dress3.jpg", alt="dress")
+									.sales-hits_subslide
+										a(href="#").sales-hits_img
+											img(src="img/catalog/dress4.jpg", alt="dress")
+								.sales-hits_subslider-prev.slider-controll.sales-hits_slider-prev
+									span.icon-keyboard_arrow_left
+								.sales-hits_subslider-next.slider-controll.sales-hits_slider-next
+									span.icon-keyboard_arrow_right
+								.sales-hits_buttons
+									a(href="#").sales-hits_button.js-img-svg
+										img(src="img/like.svg", alt="favorites").mobile-hide
+										img(src="img/favorites-hits.svg", alt="favorites").mobile-visible
+									a(href="#").sales-hits_button.js-img-svg.mobile-hide
+										img(src="img/megaphone.svg", alt="megaphone")
+								a(href="#").sales-hits_cart
+									img(src="img/cart.svg", alt="cart")
+							.sales-hits_content
+								p Платье деревенское с застежкой и накладными карманами вискоза 
+								.sales-hits_bottom-panel
+									.sales-hits_art Артикул 3292
+									.sales-hits_prise 4 100 
+										span.icon-rouble
+								.btn.mobile-visible
+									img(src="img/cart.svg", alt="cart")
+
+						.sales-hits_slide
+							.sales-hits_img-block
+								.sales-hits_subslider
+									.sales-hits_subslide
+										a(href="#").sales-hits_img
+											img(src="img/catalog/dress3.jpg", alt="dress")
+									.sales-hits_subslide
+										a(href="#").sales-hits_img
+											img(src="img/catalog/dress4.jpg", alt="dress")
+									.sales-hits_subslide
+										a(href="#").sales-hits_img
+											img(src="img/catalog/dress1.jpg", alt="dress")
+								.sales-hits_subslider-prev.slider-controll.sales-hits_slider-prev
+									span.icon-keyboard_arrow_left
+								.sales-hits_subslider-next.slider-controll.sales-hits_slider-next
+									span.icon-keyboard_arrow_right
+								.sales-hits_buttons
+									a(href="#").sales-hits_button.js-img-svg
+										img(src="img/like.svg", alt="favorites").mobile-hide
+										img(src="img/favorites-hits.svg", alt="favorites").mobile-visible
+									a(href="#").sales-hits_button.js-img-svg.mobile-hide
+										img(src="img/megaphone.svg", alt="megaphone")
+								a(href="#").sales-hits_cart
+									img(src="img/cart.svg", alt="cart")
+							.sales-hits_content
+								p Куртка-парка летняя из трикотажного хлопкового футера с джинсовой отделкой
+								.sales-hits_bottom-panel
+									.sales-hits_art Артикул 3292
+									.sales-hits_prise 4 100 
+										span.icon-rouble
+								.btn.mobile-visible
+									img(src="img/cart.svg", alt="cart")
+
+						.sales-hits_slide
+							.sales-hits_img-block
+								.sales-hits_subslider
+									.sales-hits_subslide
+										a(href="#").sales-hits_img
+											img(src="img/catalog/dress4.jpg", alt="dress")
+									.sales-hits_subslide
+										a(href="#").sales-hits_img
+											img(src="img/catalog/dress1.jpg", alt="dress")
+									.sales-hits_subslide
+										a(href="#").sales-hits_img
+											img(src="img/catalog/dress2.jpg", alt="dress")
+								.sales-hits_subslider-prev.slider-controll.sales-hits_slider-prev
+									span.icon-keyboard_arrow_left
+								.sales-hits_subslider-next.slider-controll.sales-hits_slider-next
+									span.icon-keyboard_arrow_right
+								.sales-hits_buttons
+									a(href="#").sales-hits_button.js-img-svg
+										img(src="img/like.svg", alt="favorites").mobile-hide
+										img(src="img/favorites-hits.svg", alt="favorites").mobile-visible
+									a(href="#").sales-hits_button.js-img-svg.mobile-hide
+										img(src="img/megaphone.svg", alt="megaphone")
+								a(href="#").sales-hits_cart
+									img(src="img/cart.svg", alt="cart")
+							.sales-hits_content
+								p Пальто-жилет комбинированное джинс с цветной стеганкой
+								.sales-hits_bottom-panel
+									.sales-hits_art Артикул 3292
+									.sales-hits_prise 4 100 
+										span.icon-rouble
+								.btn.mobile-visible
+									img(src="img/cart.svg", alt="cart")
+
+						.sales-hits_slide
+							.sales-hits_img-block
+								.sales-hits_subslider
+									.sales-hits_subslide
+										a(href="#").sales-hits_img
+											img(src="img/catalog/dress1.jpg", alt="dress")
+									.sales-hits_subslide
+										a(href="#").sales-hits_img
+											img(src="img/catalog/dress2.jpg", alt="dress")
+									.sales-hits_subslide
+										a(href="#").sales-hits_img
+											img(src="img/catalog/dress3.jpg", alt="dress")
+								.sales-hits_subslider-prev.slider-controll.sales-hits_slider-prev
+									span.icon-keyboard_arrow_left
+								.sales-hits_subslider-next.slider-controll.sales-hits_slider-next
+									span.icon-keyboard_arrow_right
+								.sales-hits_buttons
+									a(href="#").sales-hits_button.js-img-svg
+										img(src="img/like.svg", alt="favorites").mobile-hide
+										img(src="img/favorites-hits.svg", alt="favorites").mobile-visible
+									a(href="#").sales-hits_button.js-img-svg.mobile-hide
+										img(src="img/megaphone.svg", alt="megaphone")
+								a(href="#").sales-hits_cart
+									img(src="img/cart.svg", alt="cart")
+							.sales-hits_content
+								p Платье "Чистая линия" костюмная ткань охра
+								.sales-hits_bottom-panel
+									.sales-hits_art Артикул 3292
+									.sales-hits_prise 4 100 
+										span.icon-rouble
+								.btn.mobile-visible
+									img(src="img/cart.svg", alt="cart")
+
+					.sales-hits_controll-prev.slider-controll#sales-hits_slider-prev
+						span.icon-arrow-left
+					.sales-hits_controll-next.slider-controll#sales-hits_slider-next
+						span.icon-arrow-right
+			// /sales-hits
+
+			// reviews
+			#reviews.reviews
+				.wrapper
+					.reviews_float
+						.reviews_head
+							.reviews_title Отзывы
+							h2.reviews_subtitle О нас говорят
+							.slider-advantages_controll
+								.slider-controll.slider-advantages_controll-prev#reviews_slider-prev
+									span.icon-arrow-left
+								.slider-advantages_pagination.slider-pagination#reviews_slider_pagination
+								.slider-controll.slider-advantages_controll-next#reviews_slider-next
+									span.icon-arrow-right
+							a(href="#").request
+								span.request_text Оставить отзыв
+								img(src="img/notepad.svg", alt="notepad").request_icon
+						.reviews_slider#reviews_slider
+
+							.reviews_slide.js-slider-slide
+								.review
+									.review_head
+										.review_name Светлана
+										.review_rating
+											img(src="img/star-full.svg", alt="star").review_star
+											img(src="img/star-full.svg", alt="star").review_star
+											img(src="img/star-full.svg", alt="star").review_star
+											img(src="img/star-full.svg", alt="star").review_star
+											img(src="img/star.svg", alt="star").review_star
+									.review_date вторник, 2 апреля
+									.review_text
+										p Классный магазин, необычные вещи, супер обслуживание, мне понравилось. Магазин светлый и уютный, доступное местоположение.
+
+							.reviews_slide.js-slider-slide
+								.review
+									.review_head
+										.review_name Алина Калькова
+										.review_rating
+											img(src="img/star-full.svg", alt="star").review_star
+											img(src="img/star-full.svg", alt="star").review_star
+											img(src="img/star-full.svg", alt="star").review_star
+											img(src="img/star-full.svg", alt="star").review_star
+											img(src="img/star.svg", alt="star").review_star
+									.review_date вторник, 2 апреля
+									p Покупаю здесь постоянно. ассортимент постоянно пополняется, даже за модой следить не надо, просто покупать новые вещи здесь. Размеры совпадают, по доставке претензий не возникало.
+
+							.reviews_slide.js-slider-slide
+								.review
+									.review_head
+										.review_name Светлана
+										.review_rating
+											img(src="img/star-full.svg", alt="star").review_star
+											img(src="img/star-full.svg", alt="star").review_star
+											img(src="img/star-full.svg", alt="star").review_star
+											img(src="img/star-full.svg", alt="star").review_star
+											img(src="img/star.svg", alt="star").review_star
+									.review_date вторник, 2 апреля
+									.review_text
+										p Классный магазин, необычные вещи, супер обслуживание, мне понравилось. Магазин светлый и уютный, доступное местоположение.
+			// /reviews
+
+			.text-line 
+				.wrapper
+					p Представленная вашему вниманию марка одежды «МилаМи» — это одежда для женщин любых размеров и форм непосредственно от производителя — студии авторской одежды Милы Михайловой.
+
+			// navigation-contacts
+			#navigation-contacts.navigation-contacts
+				.wrapper
+
+					// navigation
+					nav.navigation#accordeon
+						ul.navigation_list
+							li.navigation_item
+								a(href="#").navigation_link Новинки
+							li.navigation_item
+								a(href="#").navigation_link.accordeon_trigger О МилаМи
+
+								ul.subnav.accordeon_content
+									li.subnav_item
+										a(href="#").subnav_link О бренде
+									li.subnav_item
+										a(href="#").subnav_link О бутике
+									li.subnav_item
+										a(href="#").subnav_link Новости
+									li.subnav_item
+										a(href="#").subnav_link Оптовикам
+
+							li.navigation_item
+								a(href="#").navigation_link.accordeon_trigger Как купить
+
+								ul.subnav.accordeon_content
+									li.subnav_item
+										a(href="#").subnav_link Правила
+									li.subnav_item
+										a(href="#").subnav_link Как заказать
+									li.subnav_item
+										a(href="#").subnav_link Как выбрать размер
+									li.subnav_item
+										a(href="#").subnav_link Возврат и обмен
+									li.subnav_item
+										a(href="#").subnav_link Доставка
+									li.subnav_item
+										a(href="#").subnav_link Способы оплаты
+
+							li.navigation_item
+								a(href="#").navigation_link Распродажа
+							li.navigation_item
+								a(href="#").navigation_link.accordeon_trigger Стилист
+
+								ul.subnav.accordeon_content
+									li.subnav_item
+										a(href="#").subnav_link Консультация специалиста
+									li.subnav_item
+										a(href="#").subnav_link Смена имиджа
+									li.subnav_item
+										a(href="#").subnav_link Обучение, видеоуроки от стилиста
+									li.subnav_item
+										a(href="#").subnav_link Рекомендации по уходу
+
+							li.navigation_item
+								a(href="#").navigation_link Контакты
+					// /navigation
+
+					// contacts
+					form(action="#").contacts
+						.contacts_address.js-img-svg
+							img(src="img/location.svg", alt="location")
+							span Киров, Спасская 25
+						.contacts_email
+							input(type="email", name="email" placeholder="Ваш email")
+						a(href="#").request
+							span.request_text Подписаться на новости
+						ul.social
+							li.social_item
+								a(href="#").social_link.icon-vk
+							li.social_item
+								a(href="#").social_link.icon-instagram
+							li.social_item
+								a(href="#").social_link.icon-youtube-play
+						.center
+							.contacts_copy &copy; Милами 2019
+					// /contacts
+
+			// /navigation-contacts
 			
 		include blocks/footer.jade
 
@@ -119,7 +536,7 @@ block js
 	script(src="js/jquery-3.2.1.min.js")
 	//- script(src="js/jquery.fancybox.min.js")
 	script(src="js/slick.min.js")
-	//- script(src="js/jquery.matchHeight-min.js")
+	script(src="js/jquery.matchHeight-min.js")
 	//- script(src="js/jquery.inputmask.bundle.min.js")
 	//- script(src="js/autosize.min.js")
 	//- script(src="js/tooltipster.bundle.min.js")

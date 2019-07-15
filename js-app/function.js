@@ -52,10 +52,12 @@ $(document).ready(function () {
 	// tabs($('#tabs'));
 
 	// Аккордеон
-	// accordeon($('#accordeon'));
+	accordeon($('#accordeon'), true);
 
 	// matchHeight // Задание елементам одинаковой высоты
-	// $('.match-height').matchHeight();
+	$('.slider-advantages_content h2').matchHeight();
+	$('.sales-hits_content p').matchHeight();
+	$('.review').matchHeight();
 
 	// Autosize Изменение высоты текстового поля при добавлении контента
 	// autosize($('textarea'));
@@ -293,9 +295,11 @@ function textLimit(blockText) {
   blockText.each(function(index){
     var $el = $(this),
     		html = $el.html();
-    arr.push(html);
-  	if( html.length > size) {
-  		$el.html(html.slice(0,size) + '...<a href="#" class="read-more-button" data-index="'+index+'">'+textButton+'</a>');
+  	if ($(window).width() < breakSm) {
+  		arr.push(html);
+	  	if( html.length > size) {
+	  		$el.html(html.slice(0,size) + '...<a href="#" class="read-more-button" data-index="'+index+'">'+textButton+'</a>');
+	  	}
   	}
   });
   $('.read-more-button').click(function() {
@@ -303,6 +307,24 @@ function textLimit(blockText) {
   	$(this).parent().text(arr[index]);
   });
 };
+
+// Вставляет svg в html, позволяет управлять цветом через css 
+$('.js-img-svg img').each(function(){
+  var $img = $(this);
+  var imgClass = $img.attr('class');
+  var imgURL = $img.attr('src');
+  $.get(imgURL, function(data) {
+    var $svg = $(data).find('svg');
+    if(typeof imgClass !== 'undefined') {
+      $svg = $svg.attr('class', imgClass+' replaced-svg');
+    }
+    $svg = $svg.removeAttr('xmlns:a');
+    if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+      $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
+    }
+    $img.replaceWith($svg);
+  }, 'xml');
+});
 
 // // Изменяет размер шрифта у тэга html взависимости от размера экрана (для резиновых страниц)(размеры должны быть в em)
 // function fontResize() {
@@ -338,38 +360,54 @@ function textLimit(blockText) {
 // };
 
 // Аккордеон
-// function accordeon(accordeon, mobile) {
-// 	var trigger = accordeon.find('.accordeon_trigger'),
-// 			content = accordeon.find('.accordeon_content'),
-// 			time = 300;
-// 	content.css({
-// 		display: 'none'});
-// 	trigger.on('click', function() {
-// 		$this = $(this);
-// 		if (!$this.hasClass('active')) {
-// 			trigger.removeClass('active');
-// 			$this.addClass('active');
-// 			content.stop().slideUp(time);
-// 			$this.next('.accordeon_content').stop().slideDown(time).removeClass('hide');
-// 		}
-// 		else {
-// 			$this.removeClass('active');
-// 			$this.next('.accordeon_content').stop().slideUp(time).addClass('hide');
-// 		}
-// 	});
-// 	if (mobile == true) {
-// 		$(window).resize(function() {
-// 			if ($(window).width() > breakSm) {
-// 				trigger.removeClass('active');
-// 				content.removeClass('hide')
-// 					.attr('style', '');
-// 			}
-// 			else {
-// 				content.addClass('hide')
-// 			}
-// 		});
-// 	}
-// };
+function accordeon(accordeon, mobile) {
+	var trigger = accordeon.find('.accordeon_trigger'),
+			content = accordeon.find('.accordeon_content'),
+			time = 300;
+	if (!mobile) {
+		mobile = false;
+	};
+	function contentDisplayNone() {
+		if (mobile == true && $(window).width() < breakMd) {
+			content.css({
+				display: 'none'
+			});
+		}
+		if (mobile == false) {
+			content.css({
+				display: 'none'
+			});
+		}
+	};
+	contentDisplayNone();
+	$(window).resize(function() {
+		contentDisplayNone();
+	});
+	trigger.on('click', function() {
+		$this = $(this);
+		if (mobile == true && $(window).width() < breakMd) {
+			if (!$this.hasClass('active')) {
+				trigger.removeClass('active');
+				$this.addClass('active');
+				content.stop().slideUp(time);
+				$this.next('.accordeon_content').stop().slideDown(time).removeClass('hide');
+			}else {
+				$this.removeClass('active');
+				$this.next('.accordeon_content').stop().slideUp(time).addClass('hide');
+			}
+		}
+	});
+	$(window).resize(function() {
+		if (mobile == true && $(window).width() > breakMd) {
+			trigger.removeClass('active');
+			content.removeClass('hide')
+				.attr('style', '');
+		}
+		else {
+			content.addClass('hide')
+		}
+	});
+};
 
 // // Модальное окно
 // function modal(modal) {
