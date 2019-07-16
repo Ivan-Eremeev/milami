@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>MilaMi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <!-- header-->
+    <header class="header" id="header">
+      <div class="wrapper">
+        <div class="header_top">
+          <!-- menu-->
+          <div class="menu menu--left" id="menu">
+            <button class="menu_btn hamburger hamburger--vortex" id="menu-btn" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button><a class="logo mobile-visible" href="main.html"><img src="img/logo.png" alt="logo"></a><a class="cart mobile-visible" href="#"><img src="img/cart.svg" alt="cart"></a>
+            <nav class="menu_nav" id="mmenu">
+              <div class="menu_close"></div>
+              <ul class="menu_list">
+                <li class="menu_item menu_item--catalog" id="item-catalog"><a href="#">Каталог</a><span class="menu_catalog-hamburger"></span>
+                  <!-- catalog-->
+                  <ul class="catalog mobile-hide">
+                    <li class="catalog_col">
+                      <ul class="catalog_list">
+                        <li class="catalog_item"><a href="#">Свитшоты</a></li>
+                        <li class="catalog_item"><a href="#">Вязаные вещи</a></li>
+                        <li class="catalog_item"><a href="#">Брюки</a></li>
+                        <li class="catalog_item"><a href="#">Водолазки</a></li>
+                        <li class="catalog_item"><a href="#">Джемперы, жакеты, бомберы, свитеры</a></li>
+                        <li class="catalog_item"><a href="#">Жилеты</a></li>
+                        <li class="catalog_item"><a href="#">Комбинезоны</a></li>
+                      </ul>
+                    </li>
+                    <li class="catalog_col">
+                      <ul class="catalog_list">
+                        <li class="catalog_item"><a href="#">Куртки</a></li>
+                        <li class="catalog_item"><a href="#">Майки, топы</a></li>
+                        <li class="catalog_item"><a href="#">Накидки, пончо</a></li>
+                        <li class="catalog_item"><a href="#">Пальто</a></li>
+                        <li class="catalog_item"><a href="#">Платья</a></li>
+                        <li class="catalog_item"><a href="#">Плащи</a></li>
+                        <li class="catalog_item"><a href="#">Кардиганы, шазюбль</a></li>
+                      </ul>
+                    </li>
+                    <li class="catalog_col">
+                      <ul class="catalog_list">
+                        <li class="catalog_item"><a href="#">Рубашки, блузы</a></li>
+                        <li class="catalog_item"><a href="#">Сарафаны</a></li>
+                        <li class="catalog_item"><a href="#">Спортивные костюмы</a></li>
+                        <li class="catalog_item"><a href="#">Туники</a></li>
+                        <li class="catalog_item"><a href="#">Юбки</a></li>
+                        <li class="catalog_item"><a href="#">Костюмы</a></li>
+                      </ul>
+                    </li>
+                    <li class="catalog_col catalog_col--picture"><span class="catalog_picture"><span class="catalog_img"><img src="img/catalog-sale.jpg" alt="image"></span><span class="catalog_action"><span class="catalog_title">Распродажа</span><span class="btn"><span class="btn_text">Скидки до 30%</span></span></span></span></li>
+                  </ul>
+                  <ul class="catalog catalog--mobile mobile-visible">
+                    <li class="catalog_col">
+                      <ul class="catalog_list">
+                        <li class="catalog_item data-img" data-img="img/jackets.jpg"><a href="#">Куртки</a></li>
+                        <li class="catalog_item data-img" data-img="img/tunics.jpg"><a href="#">Туники</a></li>
+                        <li class="catalog_item data-img" data-img="img/knitted.jpg"><a href="#">Вязаные<br>вещи</a></li>
+                        <li class="catalog_item data-img" data-img="img/dresses.jpg"><a href="#">Платья</a></li>
+                        <li class="catalog_item data-img" data-img="img/coat.jpg"><a href="#">Пальто</a></li>
+                        <li class="catalog_item data-img" data-img="img/trousers.jpg"><a href="#">Брюки</a></li>
+                        <li class="catalog_item data-img" data-img="img/suits.jpg"><a href="#">Костюмы</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <!-- /catalog-->
+                </li>
+                <li class="menu_item"><a href="#">Новинки</a></li>
+                <li class="menu_item menu_item--child"><a href="#">О МилаМи</a>
+                  <ul class="submenu">
+                    <li class="submenu_item"><a href="#">О бренде</a></li>
+                    <li class="submenu_item"><a href="#">О бутике</a></li>
+                    <li class="submenu_item"><a href="#">Новости</a></li>
+                    <li class="submenu_item"><a href="#">Оптовикам</a></li>
+                  </ul>
+                </li>
+                <li class="menu_item menu_item--child"><a href="#">Как купить</a>
+                  <ul class="submenu">
+                    <li class="submenu_item"><a href="#">Правила</a></li>
+                    <li class="submenu_item"><a href="#">Как заказать</a></li>
+                    <li class="submenu_item"><a href="#">Как выбрать размер</a></li>
+                    <li class="submenu_item"><a href="#">Возврат и обмен</a></li>
+                    <li class="submenu_item"><a href="#">Доставка</a></li>
+                    <li class="submenu_item"><a href="#">Способы оплаты</a></li>
+                  </ul>
+                </li>
+                <li class="menu_item"><a href="#">Распродажа</a></li>
+                <li class="menu_item menu_item--child"><a href="#">Стилист</a>
+                  <ul class="submenu">
+                    <li class="submenu_item"><a href="#">Консультация специалиста</a></li>
+                    <li class="submenu_item"><a href="#">Смена имиджа</a></li>
+                    <li class="submenu_item"><a href="#">Обучение, видеоуроки от стилиста</a></li>
+                    <li class="submenu_item"><a href="#">Рекомендации по уходу</a></li>
+                  </ul>
+                </li>
+                <li class="menu_item"><a href="#">Контакты</a></li>
+              </ul>
+              <!-- contacts-->
+              <form class="contacts" action="#">
+                <div class="contacts_address js-img-svg"><img src="img/location.svg" alt="location"><span>Киров, Спасская 25</span></div>
+                <div class="contacts_email">
+                  <input type="email" name="email" placeholder="Ваш email">
+                </div><a class="request" href="#"><span class="request_text">Подписаться на новости</span></a>
+                <ul class="social">
+                  <li class="social_item"><a class="social_link icon-vk" href="#"></a></li>
+                  <li class="social_item"><a class="social_link icon-instagram" href="#"></a></li>
+                  <li class="social_item"><a class="social_link icon-youtube-play" href="#"></a></li>
+                </ul>
+                <div class="center">
+                  <div class="contacts_copy">&copy; Милами 2019</div>
+                </div>
+              </form>
+              <!-- /contacts-->
+            </nav>
+            <div class="menu_over"></div>
+          </div>
+          <!-- /menu--><a class="email" href="mailto:mail@milamikirov.ru">mail@milamikirov.ru</a><a class="request" href="#"><span class="request_text">Оставить заявку</span><span class="request_icon icon-arrow-right"></span></a>
+        </div>
+        <div class="header_bottom"><a class="logo" href="main.html"><img src="img/logo.png" alt="logo"></a>
+          <div class="header-description">Официальный интернет-магазин авторской женской одежды</div>
+          <div class="search">
+            <input type="text" placeholder="Поиск">
+          </div>
+          <ul class="user-controll">
+            <li class="user-controll_item"><a class="favorites" href="#"><img src="img/favorites.svg" alt="favorites"></a></li>
+            <li class="user-controll_item"><a class="user" href="#"><img src="img/user.svg" alt="user"></a></li>
+            <li class="user-controll_item"><a class="cart" href="#"><img src="img/cart.svg" alt="cart"><span class="cart_count">0</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- /header-->
+    <main class="content">
+      <!-- first-slider-->
+      <div class="first-slider">
+        <div class="first-slider_bg">
+          <div class="wrapper">
+            <div class="first-slider_slider" id="first-slider">
+              <div class="first-slider_slide js-slider-slide">
+                <div class="first-slider_content first-slider_content--nopadding">
+                  <h1 class="first-slider_title">Студия авторской одежды Милы Михайловой</h1>
+                  <div class="first-slider_text mobile-hide">
+                    <h2>24 портновские мерки вместо одного классического размера</h2>
+                    <p>Благодаря индивидуальным размерам, Вы получаете одежду точно по фигуре. Независимо от особенностей: большая грудь/узкие бедра, полные бедра/маленькая грудь/полные руки. Вещи не будут в обтяг или висеть.</p><a class="btn" href="#"><span class="btn_text">Смотреть</span></a>
+                  </div>
+                </div>
+                <div class="first-slider_img"><img src="img/mannequin.png" alt="mannequin"></div>
+              </div>
+              <div class="first-slider_slide js-slider-slide">
+                <div class="first-slider_content first-slider_content--nopadding">
+                  <h1 class="first-slider_title">Студия авторской одежды Милы Михайловой</h1>
+                  <div class="first-slider_text mobile-hide">
+                    <h2>24 портновские мерки вместо одного классического размера</h2>
+                    <p>Благодаря индивидуальным размерам, Вы получаете одежду точно по фигуре. Независимо от особенностей: большая грудь/узкие бедра, полные бедра/маленькая грудь/полные руки. Вещи не будут в обтяг или висеть.</p><a class="btn" href="#"><span class="btn_text">Смотреть</span></a>
+                  </div>
+                </div>
+                <div class="first-slider_img"><img src="img/mannequin.png" alt="mannequin"></div>
+              </div>
+              <div class="first-slider_slide js-slider-slide">
+                <div class="first-slider_content first-slider_content--nopadding">
+                  <h1 class="first-slider_title">Студия авторской одежды Милы Михайловой</h1>
+                  <div class="first-slider_text mobile-hide">
+                    <h2>24 портновские мерки вместо одного классического размера</h2>
+                    <p>Благодаря индивидуальным размерам, Вы получаете одежду точно по фигуре. Независимо от особенностей: большая грудь/узкие бедра, полные бедра/маленькая грудь/полные руки. Вещи не будут в обтяг или висеть.</p><a class="btn" href="#"><span class="btn_text">Смотреть</span></a>
+                  </div>
+                </div>
+                <div class="first-slider_img"><img src="img/mannequin.png" alt="mannequin"></div>
+              </div>
+            </div>
+            <div class="slider-controll first-slider_controll-prev" id="first-slider-prev"><span class="icon-arrow-left"></span></div>
+            <div class="slider-controll first-slider_controll-next" id="first-slider-next"><span class="icon-arrow-right"></span></div>
+            <div class="first-slider_pagination slider-pagination" id="first-slider-pagination"></div>
+          </div>
+        </div>
+        <div class="first-slider_slider-mobile" id="first-slider-mobile">
+          <div class="first-slider_slider-mobile_slide">
+            <div class="first-slider_content mobile-visible">
+              <h2>24 портновские мерки вместо одного классического размера</h2>
+              <p>Благодаря индивидуальным размерам, Вы получаете одежду точно по фигуре. Независимо от особенностей: большая грудь/узкие бедра, полные бедра/маленькая грудь/полные руки. Вещи не будут в обтяг или висеть.</p>
+              <div class="center"><a class="btn" href="#"><span class="btn_text">Смотреть</span></a></div>
+            </div>
+          </div>
+          <div class="first-slider_slider-mobile_slide">
+            <div class="first-slider_content mobile-visible">
+              <h2>24 портновские мерки вместо одного классического размера</h2>
+              <p>Благодаря индивидуальным размерам, Вы получаете одежду точно по фигуре. Независимо от особенностей: большая грудь/узкие бедра, полные бедра/маленькая грудь/полные руки. Вещи не будут в обтяг или висеть.</p>
+              <div class="center"><a class="btn" href="#"><span class="btn_text">Смотреть</span></a></div>
+            </div>
+          </div>
+          <div class="first-slider_slider-mobile_slide">
+            <div class="first-slider_content mobile-visible">
+              <h2>24 портновские мерки вместо одного классического размера</h2>
+              <p>knhkБлагодаря индивидуальным размерам, Вы получаете одежду точно по фигуре. Независимо от особенностей: большая грудь/узкие бедра, полные бедра/маленькая грудь/полные руки. Вещи не будут в обтяг или висеть.</p>
+              <div class="center"><a class="btn" href="#"><span class="btn_text">Смотреть</span></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /first-slider-->
+      <!-- advantages-->
+      <div class="advantages" id="advantages">
+        <div class="wrapper">
+          <div class="advantages_slider">
+            <div class="slider-advantages" id="slider-advantages">
+              <div class="slider-advantages_slide js-slider-slide">
+                <div class="slider-advantages_img"><img src="img/sewing-machine.png" alt="sewing-machine"></div>
+                <div class="slider-advantages_content">
+                  <h2>Стильно, стройно и свободно! В любом возрасте, с любой фигурой!</h2>
+                  <p>Свободный крой без лишних выточек не требует четкой посадки по фигуре. Вещи подчеркивают Ваши достоинства в любом возрасте и с любой фигурой.</p>
+                </div>
+              </div>
+              <div class="slider-advantages_slide js-slider-slide">
+                <div class="slider-advantages_img"><img src="img/mannequin2.png" alt="mannequin"></div>
+                <div class="slider-advantages_content">
+                  <h2>Одежда, как для себя</h2>
+                  <p>Автор Мила Михайлова одевается только в свою одежду. Создает вещи для всех, как для себя.</p>
+                </div>
+              </div>
+              <div class="slider-advantages_slide js-slider-slide">
+                <div class="slider-advantages_img"><img src="img/sewing-tools.png" alt="sewing-tools"></div>
+                <div class="slider-advantages_content">
+                  <h2>24 портновские мерки вместо одного классического размера</h2>
+                  <p>Благодаря индивидуальным размерам, Вы получаете одежду точно по фигуре. Независимо от особенностей: большая грудь/узкие бедра, полные бедра/маленькая грудь/полные руки. Вещи не будут в обтяг или висеть.</p>
+                </div>
+              </div>
+              <div class="slider-advantages_slide js-slider-slide">
+                <div class="slider-advantages_img"><img src="img/sewing-machine.png" alt="sewing-machine"></div>
+                <div class="slider-advantages_content">
+                  <h2>Стильно, стройно и свободно! В любом возрасте, с любой фигурой!</h2>
+                  <p>Свободный крой без лишних выточек не требует четкой посадки по фигуре. Вещи подчеркивают Ваши достоинства в любом возрасте и с любой фигурой.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider-advantages_bottom-panel">
+            <div class="slider-advantages_controll">
+              <div class="slider-controll slider-advantages_controll-prev" id="slider-advantages-prev"><span class="icon-arrow-left"></span></div>
+              <div class="slider-advantages_pagination slider-pagination" id="slider-advantages_pagination"></div>
+              <div class="slider-controll slider-advantages_controll-next" id="slider-advantages-next"><span class="icon-arrow-right"></span></div>
+            </div><a class="btn" href="#"><span class="btn_text">Конструктор размеров</span><img src="img/scissors.svg" alt="scissors"></a>
+          </div>
+        </div>
+        <div class="slider-advantages_dots"></div>
+      </div>
+      <!-- /advantages-->
+      <!-- catalog-section-->
+      <div class="catalog-section" id="catalog-section">
+        <div class="wrapper">
+          <div class="catalog-section_slider" id="catalog-section_slider">
+            <div class="catalog-section_slide">
+              <div class="row">
+                <div class="catalog-section_col-half"><a class="catalog-section_link data-img" href="#" data-img="img/catalog-news.jpg"><span>Новинки</span></a></div>
+                <div class="catalog-section_col-half"><a class="catalog-section_link data-img" href="#" data-img="img/catalog-popular.jpg"><span>Популярные <br>модели</span></a></div>
+              </div>
+              <div class="row">
+                <div class="catalog-section_col"><a class="catalog-section_link data-img" href="#" data-img="img/catalog-jackets.jpg"><span>Куртки</span></a></div>
+                <div class="catalog-section_col"><a class="catalog-section_link data-img" href="#" data-img="img/catalog-tunics.jpg"><span>Туники</span></a></div>
+                <div class="catalog-section_col"><a class="catalog-section_link data-img" href="#" data-img="img/catalog-knitted.jpg"><span>Вязаные <br>вещи</span></a></div>
+                <div class="catalog-section_col"><a class="catalog-section_link data-img" href="#" data-img="img/catalog-skirts.jpg"><span>Юбки</span></a></div>
+              </div>
+              <div class="row">
+                <div class="catalog-section_col"><a class="catalog-section_link data-img" href="#" data-img="img/catalog-dresses.jpg"><span>Платья</span></a></div>
+                <div class="catalog-section_col"><a class="catalog-section_link data-img" href="#" data-img="img/catalog-coat.jpg"><span>Пальто</span></a></div>
+                <div class="catalog-section_col"><a class="catalog-section_link data-img" href="#" data-img="img/catalog-trousers.jpg"><span>Брюки</span></a></div>
+                <div class="catalog-section_col"><a class="catalog-section_link data-img" href="#" data-img="img/catalog-suits.jpg"><span>Костюмы</span></a></div>
+              </div>
+            </div>
+            <div class="catalog-section_slide">
+              <div class="row">
+                <div class="catalog-section_col-half"><a class="catalog-section_link data-img" href="#" data-img="img/catalog-news.jpg"><span>Новинки</span></a></div>
+                <div class="catalog-section_col-half"><a class="catalog-section_link data-img" href="#" data-img="img/catalog-popular.jpg"><span>Популярные <br>модели</span></a></div>
+              </div>
+              <div class="row">
+                <div class="catalog-section_col"><a class="catalog-section_link data-img" href="#" data-img="img/catalog-jackets.jpg"><span>Куртки</span></a></div>
+                <div class="catalog-section_col"><a class="catalog-section_link data-img" href="#" data-img="img/catalog-tunics.jpg"><span>Туники</span></a></div>
+                <div class="catalog-section_col"><a class="catalog-section_link data-img" href="#" data-img="img/catalog-knitted.jpg"><span>Вязаные <br>вещи</span></a></div>
+                <div class="catalog-section_col"><a class="catalog-section_link data-img" href="#" data-img="img/catalog-skirts.jpg"><span>Юбки</span></a></div>
+              </div>
+              <div class="row">
+                <div class="catalog-section_col"><a class="catalog-section_link data-img" href="#" data-img="img/catalog-dresses.jpg"><span>Платья</span></a></div>
+                <div class="catalog-section_col"><a class="catalog-section_link data-img" href="#" data-img="img/catalog-coat.jpg"><span>Пальто</span></a></div>
+                <div class="catalog-section_col"><a class="catalog-section_link data-img" href="#" data-img="img/catalog-trousers.jpg"><span>Брюки</span></a></div>
+                <div class="catalog-section_col"><a class="catalog-section_link data-img" href="#" data-img="img/catalog-suits.jpg"><span>Костюмы</span></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-section_controll-prev slider-controll" id="catalog-section_slider-prev"><span class="icon-arrow-left"></span></div>
+          <div class="catalog-section_controll-next slider-controll" id="catalog-section_slider-next"><span class="icon-arrow-right"></span></div>
+        </div>
+      </div>
+      <!-- /catalog-section-->
+      <!-- sales-hits-->
+      <div class="sales-hits" id="sales-hits">
+        <div class="wrapper">
+          <div class="center">
+            <h2 class="sales-hits_title">Хиты продаж</h2>
+          </div>
+          <div class="sales-hits_slider" id="sales-hits_slider">
+            <div class="sales-hits_slide">
+              <div class="sales-hits_img-block">
+                <div class="sales-hits_subslider">
+                  <div class="sales-hits_subslide"><a class="sales-hits_img" href="#"><img src="img/catalog/dress1.jpg" alt="dress"></a></div>
+                  <div class="sales-hits_subslide"><a class="sales-hits_img" href="#"><img src="img/catalog/dress2.jpg" alt="dress"></a></div>
+                  <div class="sales-hits_subslide"><a class="sales-hits_img" href="#"><img src="img/catalog/dress3.jpg" alt="dress"></a></div>
+                </div>
+                <div class="sales-hits_subslider-prev slider-controll sales-hits_slider-prev"><span class="icon-keyboard_arrow_left"></span></div>
+                <div class="sales-hits_subslider-next slider-controll sales-hits_slider-next"><span class="icon-keyboard_arrow_right"></span></div>
+                <div class="sales-hits_buttons"><a class="sales-hits_button js-img-svg" href="#"><img class="mobile-hide" src="img/like.svg" alt="favorites"><img class="mobile-visible" src="img/favorites-hits.svg" alt="favorites"></a><a class="sales-hits_button js-img-svg mobile-hide" href="#"><img src="img/megaphone.svg" alt="megaphone"></a></div><a class="sales-hits_cart" href="#"><img src="img/cart.svg" alt="cart"></a>
+              </div>
+              <div class="sales-hits_content">
+                <p>Платье "Чистая линия" костюмная ткань охра</p>
+                <div class="sales-hits_bottom-panel">
+                  <div class="sales-hits_art">Артикул 3292</div>
+                  <div class="sales-hits_prise">4 100 <span class="icon-rouble"></span></div>
+                </div>
+                <div class="btn mobile-visible"><img src="img/cart.svg" alt="cart"></div>
+              </div>
+            </div>
+            <div class="sales-hits_slide">
+              <div class="sales-hits_img-block">
+                <div class="sales-hits_subslider">
+                  <div class="sales-hits_subslide"><a class="sales-hits_img" href="#"><img src="img/catalog/dress2.jpg" alt="dress"></a></div>
+                  <div class="sales-hits_subslide"><a class="sales-hits_img" href="#"><img src="img/catalog/dress3.jpg" alt="dress"></a></div>
+                  <div class="sales-hits_subslide"><a class="sales-hits_img" href="#"><img src="img/catalog/dress4.jpg" alt="dress"></a></div>
+                </div>
+                <div class="sales-hits_subslider-prev slider-controll sales-hits_slider-prev"><span class="icon-keyboard_arrow_left"></span></div>
+                <div class="sales-hits_subslider-next slider-controll sales-hits_slider-next"><span class="icon-keyboard_arrow_right"></span></div>
+                <div class="sales-hits_buttons"><a class="sales-hits_button js-img-svg" href="#"><img class="mobile-hide" src="img/like.svg" alt="favorites"><img class="mobile-visible" src="img/favorites-hits.svg" alt="favorites"></a><a class="sales-hits_button js-img-svg mobile-hide" href="#"><img src="img/megaphone.svg" alt="megaphone"></a></div><a class="sales-hits_cart" href="#"><img src="img/cart.svg" alt="cart"></a>
+              </div>
+              <div class="sales-hits_content">
+                <p>Платье деревенское с застежкой и накладными карманами вискоза </p>
+                <div class="sales-hits_bottom-panel">
+                  <div class="sales-hits_art">Артикул 3292</div>
+                  <div class="sales-hits_prise">4 100 <span class="icon-rouble"></span></div>
+                </div>
+                <div class="btn mobile-visible"><img src="img/cart.svg" alt="cart"></div>
+              </div>
+            </div>
+            <div class="sales-hits_slide">
+              <div class="sales-hits_img-block">
+                <div class="sales-hits_subslider">
+                  <div class="sales-hits_subslide"><a class="sales-hits_img" href="#"><img src="img/catalog/dress3.jpg" alt="dress"></a></div>
+                  <div class="sales-hits_subslide"><a class="sales-hits_img" href="#"><img src="img/catalog/dress4.jpg" alt="dress"></a></div>
+                  <div class="sales-hits_subslide"><a class="sales-hits_img" href="#"><img src="img/catalog/dress1.jpg" alt="dress"></a></div>
+                </div>
+                <div class="sales-hits_subslider-prev slider-controll sales-hits_slider-prev"><span class="icon-keyboard_arrow_left"></span></div>
+                <div class="sales-hits_subslider-next slider-controll sales-hits_slider-next"><span class="icon-keyboard_arrow_right"></span></div>
+                <div class="sales-hits_buttons"><a class="sales-hits_button js-img-svg" href="#"><img class="mobile-hide" src="img/like.svg" alt="favorites"><img class="mobile-visible" src="img/favorites-hits.svg" alt="favorites"></a><a class="sales-hits_button js-img-svg mobile-hide" href="#"><img src="img/megaphone.svg" alt="megaphone"></a></div><a class="sales-hits_cart" href="#"><img src="img/cart.svg" alt="cart"></a>
+              </div>
+              <div class="sales-hits_content">
+                <p>Куртка-парка летняя из трикотажного хлопкового футера с джинсовой отделкой</p>
+                <div class="sales-hits_bottom-panel">
+                  <div class="sales-hits_art">Артикул 3292</div>
+                  <div class="sales-hits_prise">4 100 <span class="icon-rouble"></span></div>
+                </div>
+                <div class="btn mobile-visible"><img src="img/cart.svg" alt="cart"></div>
+              </div>
+            </div>
+            <div class="sales-hits_slide">
+              <div class="sales-hits_img-block">
+                <div class="sales-hits_subslider">
+                  <div class="sales-hits_subslide"><a class="sales-hits_img" href="#"><img src="img/catalog/dress4.jpg" alt="dress"></a></div>
+                  <div class="sales-hits_subslide"><a class="sales-hits_img" href="#"><img src="img/catalog/dress1.jpg" alt="dress"></a></div>
+                  <div class="sales-hits_subslide"><a class="sales-hits_img" href="#"><img src="img/catalog/dress2.jpg" alt="dress"></a></div>
+                </div>
+                <div class="sales-hits_subslider-prev slider-controll sales-hits_slider-prev"><span class="icon-keyboard_arrow_left"></span></div>
+                <div class="sales-hits_subslider-next slider-controll sales-hits_slider-next"><span class="icon-keyboard_arrow_right"></span></div>
+                <div class="sales-hits_buttons"><a class="sales-hits_button js-img-svg" href="#"><img class="mobile-hide" src="img/like.svg" alt="favorites"><img class="mobile-visible" src="img/favorites-hits.svg" alt="favorites"></a><a class="sales-hits_button js-img-svg mobile-hide" href="#"><img src="img/megaphone.svg" alt="megaphone"></a></div><a class="sales-hits_cart" href="#"><img src="img/cart.svg" alt="cart"></a>
+              </div>
+              <div class="sales-hits_content">
+                <p>Пальто-жилет комбинированное джинс с цветной стеганкой</p>
+                <div class="sales-hits_bottom-panel">
+                  <div class="sales-hits_art">Артикул 3292</div>
+                  <div class="sales-hits_prise">4 100 <span class="icon-rouble"></span></div>
+                </div>
+                <div class="btn mobile-visible"><img src="img/cart.svg" alt="cart"></div>
+              </div>
+            </div>
+            <div class="sales-hits_slide">
+              <div class="sales-hits_img-block">
+                <div class="sales-hits_subslider">
+                  <div class="sales-hits_subslide"><a class="sales-hits_img" href="#"><img src="img/catalog/dress1.jpg" alt="dress"></a></div>
+                  <div class="sales-hits_subslide"><a class="sales-hits_img" href="#"><img src="img/catalog/dress2.jpg" alt="dress"></a></div>
+                  <div class="sales-hits_subslide"><a class="sales-hits_img" href="#"><img src="img/catalog/dress3.jpg" alt="dress"></a></div>
+                </div>
+                <div class="sales-hits_subslider-prev slider-controll sales-hits_slider-prev"><span class="icon-keyboard_arrow_left"></span></div>
+                <div class="sales-hits_subslider-next slider-controll sales-hits_slider-next"><span class="icon-keyboard_arrow_right"></span></div>
+                <div class="sales-hits_buttons"><a class="sales-hits_button js-img-svg" href="#"><img class="mobile-hide" src="img/like.svg" alt="favorites"><img class="mobile-visible" src="img/favorites-hits.svg" alt="favorites"></a><a class="sales-hits_button js-img-svg mobile-hide" href="#"><img src="img/megaphone.svg" alt="megaphone"></a></div><a class="sales-hits_cart" href="#"><img src="img/cart.svg" alt="cart"></a>
+              </div>
+              <div class="sales-hits_content">
+                <p>Платье "Чистая линия" костюмная ткань охра</p>
+                <div class="sales-hits_bottom-panel">
+                  <div class="sales-hits_art">Артикул 3292</div>
+                  <div class="sales-hits_prise">4 100 <span class="icon-rouble"></span></div>
+                </div>
+                <div class="btn mobile-visible"><img src="img/cart.svg" alt="cart"></div>
+              </div>
+            </div>
+          </div>
+          <div class="sales-hits_controll-prev slider-controll" id="sales-hits_slider-prev"><span class="icon-arrow-left"></span></div>
+          <div class="sales-hits_controll-next slider-controll" id="sales-hits_slider-next"><span class="icon-arrow-right"></span></div>
+        </div>
+      </div>
+      <!-- /sales-hits-->
+      <!-- reviews-->
+      <div class="reviews" id="reviews">
+        <div class="wrapper">
+          <div class="reviews_float">
+            <div class="reviews_head">
+              <div class="reviews_title">Отзывы</div>
+              <h2 class="reviews_subtitle">О нас говорят</h2>
+              <div class="slider-advantages_controll">
+                <div class="slider-controll slider-advantages_controll-prev" id="reviews_slider-prev"><span class="icon-arrow-left"></span></div>
+                <div class="slider-advantages_pagination slider-pagination" id="reviews_slider_pagination"></div>
+                <div class="slider-controll slider-advantages_controll-next" id="reviews_slider-next"><span class="icon-arrow-right"></span></div>
+              </div><a class="request" href="#"><span class="request_text">Оставить отзыв</span><img class="request_icon" src="img/notepad.svg" alt="notepad"></a>
+            </div>
+            <div class="reviews_slider" id="reviews_slider">
+              <div class="reviews_slide js-slider-slide">
+                <div class="review">
+                  <div class="review_head">
+                    <div class="review_name">Светлана</div>
+                    <div class="review_rating"><img class="review_star" src="img/star-full.svg" alt="star"><img class="review_star" src="img/star-full.svg" alt="star"><img class="review_star" src="img/star-full.svg" alt="star"><img class="review_star" src="img/star-full.svg" alt="star"><img class="review_star" src="img/star.svg" alt="star"></div>
+                  </div>
+                  <div class="review_date">вторник, 2 апреля</div>
+                  <div class="review_text">
+                    <p>Классный магазин, необычные вещи, супер обслуживание, мне понравилось. Магазин светлый и уютный, доступное местоположение.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="reviews_slide js-slider-slide">
+                <div class="review">
+                  <div class="review_head">
+                    <div class="review_name">Алина Калькова</div>
+                    <div class="review_rating"><img class="review_star" src="img/star-full.svg" alt="star"><img class="review_star" src="img/star-full.svg" alt="star"><img class="review_star" src="img/star-full.svg" alt="star"><img class="review_star" src="img/star-full.svg" alt="star"><img class="review_star" src="img/star.svg" alt="star"></div>
+                  </div>
+                  <div class="review_date">вторник, 2 апреля</div>
+                  <p>Покупаю здесь постоянно. ассортимент постоянно пополняется, даже за модой следить не надо, просто покупать новые вещи здесь. Размеры совпадают, по доставке претензий не возникало.</p>
+                </div>
+              </div>
+              <div class="reviews_slide js-slider-slide">
+                <div class="review">
+                  <div class="review_head">
+                    <div class="review_name">Светлана</div>
+                    <div class="review_rating"><img class="review_star" src="img/star-full.svg" alt="star"><img class="review_star" src="img/star-full.svg" alt="star"><img class="review_star" src="img/star-full.svg" alt="star"><img class="review_star" src="img/star-full.svg" alt="star"><img class="review_star" src="img/star.svg" alt="star"></div>
+                  </div>
+                  <div class="review_date">вторник, 2 апреля</div>
+                  <div class="review_text">
+                    <p>Классный магазин, необычные вещи, супер обслуживание, мне понравилось. Магазин светлый и уютный, доступное местоположение.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /reviews-->
+      <div class="text-line"> 
+        <div class="wrapper">
+          <p>Представленная вашему вниманию марка одежды «МилаМи» — это одежда для женщин любых размеров и форм непосредственно от производителя — студии авторской одежды Милы Михайловой.</p>
+        </div>
+      </div>
+      <!-- navigation-contacts-->
+      <div class="navigation-contacts" id="navigation-contacts">
+        <div class="wrapper">
+          <!-- navigation-->
+          <nav class="navigation" id="accordeon">
+            <ul class="navigation_list">
+              <li class="navigation_item"><a class="navigation_link" href="#">Новинки</a></li>
+              <li class="navigation_item"><a class="navigation_link accordeon_trigger" href="#">О МилаМи</a>
+                <ul class="subnav accordeon_content">
+                  <li class="subnav_item"><a class="subnav_link" href="#">О бренде</a></li>
+                  <li class="subnav_item"><a class="subnav_link" href="#">О бутике</a></li>
+                  <li class="subnav_item"><a class="subnav_link" href="#">Новости</a></li>
+                  <li class="subnav_item"><a class="subnav_link" href="#">Оптовикам</a></li>
+                </ul>
+              </li>
+              <li class="navigation_item"><a class="navigation_link accordeon_trigger" href="#">Как купить</a>
+                <ul class="subnav accordeon_content">
+                  <li class="subnav_item"><a class="subnav_link" href="#">Правила</a></li>
+                  <li class="subnav_item"><a class="subnav_link" href="#">Как заказать</a></li>
+                  <li class="subnav_item"><a class="subnav_link" href="#">Как выбрать размер</a></li>
+                  <li class="subnav_item"><a class="subnav_link" href="#">Возврат и обмен</a></li>
+                  <li class="subnav_item"><a class="subnav_link" href="#">Доставка</a></li>
+                  <li class="subnav_item"><a class="subnav_link" href="#">Способы оплаты</a></li>
+                </ul>
+              </li>
+              <li class="navigation_item"><a class="navigation_link" href="#">Распродажа</a></li>
+              <li class="navigation_item"><a class="navigation_link accordeon_trigger" href="#">Стилист</a>
+                <ul class="subnav accordeon_content">
+                  <li class="subnav_item"><a class="subnav_link" href="#">Консультация специалиста</a></li>
+                  <li class="subnav_item"><a class="subnav_link" href="#">Смена имиджа</a></li>
+                  <li class="subnav_item"><a class="subnav_link" href="#">Обучение, видеоуроки от стилиста</a></li>
+                  <li class="subnav_item"><a class="subnav_link" href="#">Рекомендации по уходу</a></li>
+                </ul>
+              </li>
+              <li class="navigation_item"><a class="navigation_link" href="#">Контакты</a></li>
+            </ul>
+          </nav>
+          <!-- /navigation-->
+          <!-- contacts-->
+          <form class="contacts" action="#">
+            <div class="contacts_address js-img-svg"><img src="img/location.svg" alt="location"><span>Киров, Спасская 25</span></div>
+            <div class="contacts_email">
+              <input type="email" name="email" placeholder="Ваш email">
+            </div><a class="request" href="#"><span class="request_text">Подписаться на новости</span></a>
+            <ul class="social">
+              <li class="social_item"><a class="social_link icon-vk" href="#"></a></li>
+              <li class="social_item"><a class="social_link icon-instagram" href="#"></a></li>
+              <li class="social_item"><a class="social_link icon-youtube-play" href="#"></a></li>
+            </ul>
+            <div class="center">
+              <div class="contacts_copy">&copy; Милами 2019</div>
+            </div>
+          </form>
+          <!-- /contacts-->
+        </div>
+      </div>
+      <!-- /navigation-contacts-->
+    </main>
+    <!-- footer-->
+    <footer class="footer"> 
+      <div class="wrapper"> 
+        <div class="row">
+          <div class="footer_col">
+            <div class="footer_time">
+              <p>пн-пт: 9.00 - 18.00</p>
+              <p>сб-вс: 10.00 - 17.00</p>
+            </div><a class="request" href="#"><span class="request_text">Режим работы</span><span class="request_icon icon-time"></span></a>
+          </div>
+          <div class="footer_col"><a class="request" href="#"><span class="request_text">Заказать звонок</span><img class="request_icon" src="img/phone.svg" alt="phone"></a></div>
+          <div class="footer_col">
+            <div class="footer_mail"> <a href="mailto:mail@milamikirov.ru">mail@milamikirov.ru</a></div><a class="request" href="#"><span class="request_text">Оставить заявку</span><span class="request_icon icon-arrow-right"></span></a>
+          </div>
+          <div class="footer_col">
+            <div class="footer_copy">&copy; Милами 2019</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- /footer-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.matchHeight-min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
