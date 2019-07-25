@@ -75,6 +75,7 @@ h2 {
 	justify-content: center;
 	height: 40px;
 	padding: 0 25px;
+	border: none;
 	border-radius: 25px;
 	background-color: $yellow;
 	font-size: 14px;
@@ -83,6 +84,7 @@ h2 {
 	transition: .1s;
 	cursor: pointer;
 	white-space: nowrap;
+	cursor: pointer;
 	&_text {
 		border-bottom: 1px dotted transparent;
 		transition: .1s;

@@ -1970,6 +1970,7 @@ h2 {
   justify-content: center;
   height: 40px;
   padding: 0 25px;
+  border: none;
   border-radius: 25px;
   background-color: #FFD034;
   font-size: 14px;
@@ -1980,6 +1981,7 @@ h2 {
   transition: .1s;
   cursor: pointer;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .btn_text {
@@ -3656,6 +3658,8 @@ h2 {
   width: 37px;
   height: 37px;
   background-color: #fff;
+  border: none;
+  cursor: pointer;
   border-radius: 50%;
   position: absolute;
   bottom: 10px;
